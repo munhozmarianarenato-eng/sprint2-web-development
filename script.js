@@ -29,3 +29,33 @@ function atualizarHorario() {
 }
 
 setInterval(atualizarHorario, 1000);
+
+const imagens = [
+
+    "img/imagem1.jpg",
+
+    "img/imagem2.jpg",
+
+    "img/imagem3.jpg"
+
+];
+
+let indice = 0;
+
+function trocarImagem() {
+
+    indice++;
+
+    if(indice >= imagens.length) {
+
+        indice = 0;
+
+    }
+
+    document.getElementById("imagemSlide").src = imagens[indice];
+
+}
+
+document.getElementById("imagemSlide").src = imagens[0];
+
+setInterval(trocarImagem, 3000);
