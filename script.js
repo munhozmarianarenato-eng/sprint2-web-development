@@ -17,3 +17,15 @@ botaoLogin.addEventListener("click", function() {
     }
 
 });
+
+function atualizarHorario() {
+
+    let agora = new Date();
+
+    let horario = agora.toLocaleTimeString();
+
+    document.getElementById("horario").innerText = horario;
+
+}
+
+setInterval(atualizarHorario, 1000);
