@@ -80,4 +80,8 @@ botaoAdicionar.addEventListener("click", function() {
 
     document.getElementById("listaTarefas").appendChild(item);
 
+let quantidade = document.querySelectorAll("#listaTarefas li").length;
+
+document.getElementById("contadorTarefas").innerText = quantidade;
+
 });
