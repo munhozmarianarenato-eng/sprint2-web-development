@@ -59,3 +59,25 @@ function trocarImagem() {
 document.getElementById("imagemSlide").src = imagens[0];
 
 setInterval(trocarImagem, 3000);
+
+const botaoAdicionar = document.getElementById("botaoAdicionar");
+
+botaoAdicionar.addEventListener("click", function() {
+
+    let tarefa = document.getElementById("inputTarefa").value;
+
+    if(tarefa === "") {
+
+        alert("Digite uma tarefa");
+
+        return;
+
+    }
+
+    let item = document.createElement("li");
+
+    item.innerText = tarefa;
+
+    document.getElementById("listaTarefas").appendChild(item);
+
+});
