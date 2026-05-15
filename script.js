@@ -80,8 +80,20 @@ botaoAdicionar.addEventListener("click", function() {
 
     document.getElementById("listaTarefas").appendChild(item);
 
-let quantidade = document.querySelectorAll("#listaTarefas li").length;
+    let quantidade = document.querySelectorAll("#listaTarefas li").length;
 
-document.getElementById("contadorTarefas").innerText = quantidade;
+    document.getElementById("contadorTarefas").innerText = quantidade;
+
+    document.getElementById("inputTarefa").value = "";
+
+});
+
+const botaoLimpar = document.getElementById("limparLista");
+
+botaoLimpar.addEventListener("click", function() {
+
+    document.getElementById("listaTarefas").innerHTML = "";
+
+    document.getElementById("contadorTarefas").innerText = 0;
 
 });

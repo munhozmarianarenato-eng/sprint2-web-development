@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
     <meta charset="UTF-8">
@@ -11,79 +12,123 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-    <h1>Sprint 2 - Web Development</h1>
+    <!-- Cabeçalho -->
+    <header>
 
-    <section>
+        <h1>Sprint 2 - Web Development</h1>
 
-        <h2>Login</h2>
+    </header>
 
-        <input
-            type="text"
-            id="usuario"
-            placeholder="Digite seu usuário"
-        >
+    <!-- Conteúdo principal -->
+    <main class="container">
 
-        <input
-            type="password"
-            id="senha"
-            placeholder="Digite sua senha"
-        >
+        <!-- Área de Login -->
+        <section class="card login-area">
 
-        <button id="botaoLogin">
-            Entrar
-        </button>
+            <h2>Login</h2>
 
-    </section>
+            <label for="usuario">
+                Usuário
+            </label>
 
-    <section>
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Digite seu usuário"
+                required
+            >
 
-        <h2>Horário Atual</h2>
+            <label for="senha">
+                Senha
+            </label>
 
-        <p id="horario"></p>
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+                required
+            >
 
-    </section>
+            <button id="botaoLogin">
+                Entrar
+            </button>
 
-    <section>
+            <p id="mensagemLogin"></p>
 
-        <h2>Slideshow</h2>
+        </section>
 
-        <img
-            id="imagemSlide"
-            src=""
-            alt="Imagem"
-            width="300"
-        >
+        <!-- Horário Atual -->
+        <section class="card horario-area">
 
-    </section>
+            <h2>Horário Atual</h2>
 
-    <section>
+            <p id="horario"></p>
 
-        <h2>Lista de Tarefas</h2>
+        </section>
 
-        <input
-            type="text"
-            id="inputTarefa"
-            placeholder="Digite uma tarefa"
-        >
+        <!-- Slideshow -->
+        <section class="card slideshow-area">
 
-        <button id="botaoAdicionar">
-            Adicionar
-        </button>
+            <h2>Slideshow</h2>
+
+            <img
+                id="imagemSlide"
+                src=""
+                alt="Imagem do slideshow"
+                width="300"
+            >
+
+        </section>
+
+        <!-- Lista de Tarefas -->
+        <section class="card tarefas-area">
+
+            <h2>Lista de Tarefas</h2>
+
+            <input
+                type="text"
+                id="inputTarefa"
+                placeholder="Digite uma tarefa"
+            >
+
+            <button id="botaoAdicionar">
+                Adicionar
+            </button>
+
+            <button id="limparLista">
+                Limpar Lista
+            </button>
+
+            <p class="contador">
+
+                Quantidade de tarefas:
+
+                <span id="contadorTarefas">
+                    0
+                </span>
+
+            </p>
+
+            <ul id="listaTarefas"></ul>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
 
         <p>
-            Quantidade de tarefas:
-            <span id="contadorTarefas">
-                0
-            </span>
+            Sprint 2 - Web Development
         </p>
 
-        <ul id="listaTarefas"></ul>
-
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
